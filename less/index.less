@@ -59,6 +59,17 @@ html, body {
 
 /* MY STYLES START HERE */
 
+/****** VARIABLES ******/
+@bgcolor1: pink;
+@bgcolor2: oldlace;
+
+
+/***** MIX-INS *****/
+.flex-center(){
+	display: flex;
+	justify-content: center;
+}
+
 body {
 	font-family: 'Poppins', sans-serif;
 }
@@ -82,5 +93,25 @@ h3 {
 table, th, td {
 	border: 1px solid hotpink;
 	text-align: center;
+}
+
+header, footer, .about, .skills {
+	background-color: @bgcolor1;
+}
+
+img, .opener, .work-history {
+	background-color: @bgcolor2;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+/***** MEDIA QUERIES *****/
+
+@media (max-width: 500px) {
+	.parent-container {
+		.flex();
+	}
 }
 

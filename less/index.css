@@ -135,6 +135,8 @@ body {
   height: 100%;
 }
 /* MY STYLES START HERE */
+/****** VARIABLES ******/
+/***** MIX-INS *****/
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -161,3 +163,18 @@ td {
   border: 1px solid hotpink;
   text-align: center;
 }
+header,
+footer,
+.about,
+.skills {
+  background-color: pink;
+}
+img,
+.opener,
+.work-history {
+  background-color: oldlace;
+}
+nav a {
+  text-decoration: none;
+}
+/***** MEDIA QUERIES *****/
