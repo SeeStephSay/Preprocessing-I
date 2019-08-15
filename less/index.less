@@ -70,12 +70,17 @@ html, body {
 	justify-content: center;
 }
 
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
 body {
 	font-family: 'Poppins', sans-serif;
 }
 
 body div, section, footer, main div {
-	border: 1px dashed grey;
+	// border: 1px dashed grey;
 }
 
 h1 , h2, h3, h4, h5, h6 {
@@ -137,7 +142,11 @@ main {
 .image {
 	padding: 1% 1% 1% 10%;
 	width: 50%;
-	border: 1px dashed grey;
+	// border: 1px dashed grey;
+}
+
+hr {
+	margin-right: 1%;
 }
 
 .contact {
@@ -148,7 +157,6 @@ main {
 .intro {
 	margin: 25% 0 1% 0;
 	text-align: center;
-
 }
 
 .contact-me {
@@ -173,32 +181,29 @@ i {
 	padding: 1%;
 }
 
-.work-history {
-	
-}
-
 table, th, td {
 	border: 1px solid hotpink;
 	text-align: center;
 }
 
 .table {
-	display: flex;
-	flex-direction: column;
+	.flex-column();
 	margin: 1%;
+}
+
+th {
+	font-weight: bold;
 }
 
 .table h3 {
 	.flex-center();
 }
 
-
-
 /***** MEDIA QUERIES *****/
 
 @media (max-width: 500px) {
-	.parent-container {
-		.flex-center();
+	nav, main, section {
+		.flex-column();
 	}
 }
 
