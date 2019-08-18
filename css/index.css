@@ -145,9 +145,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-body {
-  font-family: 'Poppins', sans-serif;
-}
+/***** GLOBAL STYLES *****/
 h1,
 h2,
 h3,
@@ -168,101 +166,148 @@ h3 {
   font-size: 1.3rem;
   margin-bottom: 1%;
 }
-header,
-footer,
-.about,
-.skills {
+/***** BODY STYLES *****/
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #282D30;
+}
+.wrapper header {
   background-color: pink;
 }
-nav,
-footer {
-  height: 8%;
-}
-header nav,
-footer {
+.wrapper header nav {
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
   padding: 1%;
+  height: 8%;
 }
-.image,
-.contact,
-.work-history {
-  background-color: oldlace;
-}
-nav a {
-  justify-content: space-between;
+.wrapper header a {
+  justify-content: space-evenly;
   text-decoration: none;
   color: white;
 }
-a:hover {
+.wrapper header a:hover {
   color: oldlace;
 }
-img {
-  width: 75%;
-  border-radius: 50%;
-}
-main {
+.wrapper main {
   display: flex;
   justify-content: center;
 }
-.image {
+@media (max-width: 500px) {
+  .wrapper main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.wrapper .image {
   padding: 1% 1% 1% 10%;
   width: 50%;
+  background-color: oldlace;
 }
-hr {
-  margin-right: 1%;
+.wrapper .image img {
+  width: 75%;
+  border-radius: 50%;
 }
-.contact {
+@media (max-width: 500px) {
+  .wrapper .image {
+    width: 100%;
+    padding: 2%;
+  }
+  .wrapper .image img {
+    width: 100%;
+  }
+}
+.wrapper .contact {
+  background-color: oldlace;
   flex-direction: column;
   width: 50%;
 }
-.intro {
+.wrapper .contact .intro {
   margin: 25% 0 1% 0;
   text-align: center;
 }
-.contact-me {
+.wrapper .contact hr {
+  margin: 2%;
+}
+@media (max-width: 500px) {
+  .wrapper .contact {
+    width: 100%;
+  }
+  .wrapper .contact .intro {
+    margin: 5%;
+  }
+}
+.wrapper .contact .contact-me {
   text-align: center;
 }
-.contact-me a {
-  color: black;
+.wrapper .contact a {
+  color: #282D30;
 }
-i {
-  margin: 1% 1%;
+.wrapper .contact a i {
+  margin: 2% 2%;
 }
 .about {
   display: flex;
+  background-color: pink;
 }
-#about-me,
+@media (max-width: 500px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.about #about-me {
+  width: 50%;
+  text-align: center;
+  padding: 1%;
+}
+@media (max-width: 500px) {
+  .about #about-me {
+    width: 100%;
+  }
+}
 #skills {
   width: 50%;
   text-align: center;
   padding: 1%;
 }
-table,
-th,
-td {
-  border: 1px solid hotpink;
-  text-align: center;
+@media (max-width: 500px) {
+  #skills {
+    width: 100%;
+  }
 }
-.table {
+/* body div, section, footer, main div {
+			// border: 1px dashed grey;
+		} */
+.work-history {
+  background-color: oldlace;
+}
+.work-history .table {
   display: flex;
   flex-direction: column;
-  margin: 1%;
+  padding: 1%;
 }
-th {
-  font-weight: bold;
-}
-.table h3 {
+.work-history .table h3 {
   display: flex;
   justify-content: center;
 }
-/***** MEDIA QUERIES *****/
-@media (max-width: 500px) {
-  nav,
-  main,
-  section {
-    display: flex;
-    flex-direction: column;
-  }
+.work-history .table table,
+.work-history .table th,
+.work-history .table td {
+  border: 1px solid hotpink;
+  text-align: center;
+}
+.work-history .table table th,
+.work-history .table th th,
+.work-history .table td th {
+  font-weight: bold;
+  border: 2px solid hotpink;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 1%;
+  height: 8%;
+  background-color: pink;
 }

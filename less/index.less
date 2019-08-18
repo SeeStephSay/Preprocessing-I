@@ -65,6 +65,7 @@ html, body {
 
 
 /***** MIX-INS *****/
+
 .flex-center {
 	display: flex;
 	justify-content: center;
@@ -75,14 +76,8 @@ html, body {
 	flex-direction: column;
 }
 
-body {
-	font-family: 'Poppins', sans-serif;
-}
 
-body div, section, footer, main div {
-	// border: 1px dashed grey;
-}
-
+/***** GLOBAL STYLES *****/
 h1 , h2, h3, h4, h5, h6 {
 	font-family: 'Lobster Two', cursive;
 }
@@ -102,108 +97,140 @@ h3 {
 	margin-bottom: 1%
 }
 
-header, footer, .about, .skills {
-	background-color: @bgcolor1;
+/***** BODY STYLES *****/
+
+body {
+	font-family: 'Poppins', sans-serif;
+	color: #282D30;
 }
 
-nav, footer {
-	height: 8%;
-}
+	.wrapper {
+		header {
+			background-color: @bgcolor1;
+			nav {
+			.flex-center();
+			justify-content: space-evenly;
+			padding: 1%;
+			height: 8%;
+			}
+			a {
+			justify-content: space-evenly;
+			text-decoration: none;
+			color: white;
+			}
+			a:hover {
+				color: @bgcolor2;
+			}
+		}
 
-header nav, footer {
-	.flex-center();
-	justify-content: space-evenly;
-	padding: 1%;
-}
+		main {
+			@media (max-width: 500px) {
+				.flex-column;
+			}
+			.flex-center();	
+			}
+			.image {
+				padding: 1% 1% 1% 10%;
+				width: 50%;
+			// border: 1px dashed grey;
+				background-color: @bgcolor2;
+				img {
+					width: 75%;
+					border-radius: 50%;
+				}
+				@media (max-width: 500px) {
+					img {
+						width: 100%;
+					}
+					width: 100%;
+					padding: 2%;
+				}
+			}
+			.contact {
+				background-color: @bgcolor2;
+				flex-direction: column;
+				width: 50%;
+				.intro {
+					margin: 25% 0 1% 0;
+					text-align: center;
+				}
+				hr {
+					margin: 2%;
+				}
+				@media (max-width: 500px) {
+					.intro {
+						margin: 5%;
+					}
+					width: 100%;
+				}
+				.contact-me {
+					text-align: center;
+				}
+					a {
+					color: #282D30;
+						i {
+						margin: 2% 2%
+					}
+				}
+			}	
+		}
+		
 
-.image, .contact, .work-history {
-	background-color: @bgcolor2;
-}
+			.about {
+				display: flex;
+				background-color: @bgcolor1;
+				@media (max-width: 500px) {
+					.flex-column;
+				}
+				#about-me {
+					width: 50%;
+					text-align: center;
+					padding: 1%;
+					@media (max-width: 500px) {
+						width: 100%;
+					}
+				} 
+			}
 
-nav a {
-	justify-content: space-between;
-	text-decoration: none;
-	color: white;
-}
+			#skills{
+				width: 50%;
+				text-align: center;
+				padding: 1%;
+				@media (max-width: 500px) {
+					width: 100%;
+				}
+			}
+			
+		/* body div, section, footer, main div {
+			// border: 1px dashed grey;
+		} */
 
-a:hover {
-	color: @bgcolor2;
-}
+		.work-history {
+			background-color: @bgcolor2;
+			.table {
+				.flex-column();
+				padding: 1%;
+				h3 {
+					.flex-center();
+				}
+				table, th, td {
+					border: 1px solid hotpink;
+					text-align: center;
+					th {
+						font-weight: bold;
+						border: 2px solid hotpink;
+					}
+				}
+			}
+		}
 
-img {
-	width: 75%;
-	border-radius: 50%;
-}
-
-main {
-	.flex-center();
-}
-
-.image {
-	padding: 1% 1% 1% 10%;
-	width: 50%;
-	// border: 1px dashed grey;
-}
-
-hr {
-	margin-right: 1%;
-}
-
-.contact {
-	flex-direction: column;
-	width: 50%;
-}
-
-.intro {
-	margin: 25% 0 1% 0;
-	text-align: center;
-}
-
-.contact-me {
-	text-align: center;
-}
-
-.contact-me a {
-	color: black;
-}
-
-i {
-	margin: 1% 1%
-}
-
-.about {
-	display: flex;	
-}
-
-#about-me, #skills{
-	width: 50%;
-	text-align: center;
-	padding: 1%;
-}
-
-table, th, td {
-	border: 1px solid hotpink;
-	text-align: center;
-}
-
-.table {
-	.flex-column();
-	margin: 1%;
-}
-
-th {
-	font-weight: bold;
-}
-
-.table h3 {
-	.flex-center();
-}
-
-/***** MEDIA QUERIES *****/
-
-@media (max-width: 500px) {
-	nav, main, section {
-		.flex-column();
-	}
-}
+		footer {
+			.flex-center();
+			justify-content: space-evenly;
+			padding: 1%;
+			height: 8%;
+			background-color: @bgcolor1;
+		}
+	
+	
 
