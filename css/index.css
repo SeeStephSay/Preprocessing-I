@@ -132,48 +132,97 @@ table {
 }
 html,
 body {
+  color: #faf9fafa;
+  font-family: 'Handlee', cursive;
   height: 100%;
 }
 /* MY CODE STARTS HERE */
 .container {
-  margin: 4vh;
-  max-width: 96vw;
-  max-height: 96vh;
-  /*Is this okay with the margin? */
+  margin: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   border: 1px solid orangered;
 }
-.container header {
+.container .top-content {
+  flex-grow: 1;
+}
+.container .top-content header {
   height: 40%;
-  width: 55%;
+  width: 100%;
   padding: 4vh;
-  color: #e7c97c;
+  order: 1;
+  color: #FAF9FA;
   font-family: 'Delius Swash Caps', cursive;
   text-align: center;
-  background: #d18a95;
-  background: linear-gradient(0deg, rgba(209, 138, 149, 0.89899118) 20%, #bf7d87 66%);
+  background: #ec94a2;
+}
+.container .top-content header h1 {
+  font-size: 4rem;
+  padding: 5%;
+}
+.container .top-content header h4 {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 1%;
+  background: #291F33;
 }
 .container aside {
   height: 100%;
-  width: 30%;
-  border: 1px solid rebeccapurple;
+  width: 35%;
+  padding: 3vh;
+  background: #291F33;
+  text-align: center;
+  border: 1px solid yellow;
 }
 .container aside img {
-  height: 10vh;
-  width: 10vw;
+  padding: 1vh;
+  border: 2px solid #877B8D;
+  border-radius: 15%;
+  margin-bottom: 4%;
+  height: 40vh;
+  width: 15vw;
 }
-.container .hello,
-.container .get-social {
-  color: #e7c97c;
-  align-content: center;
-  height: 5vh;
-  /* used vh so div scales with h2 inside it*/
-  border: 3px solid rgba(191, 125, 135, 0.95);
+.container aside a {
+  text-decoration: none;
+  color: #FAF9FA;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.container aside i {
+  color: #FAF9FA;
+  padding-top: 1vh;
+}
+.container aside h3 {
+  color: #FAF9FA;
+  font-weight: bold;
+  padding: 1vh;
+  margin: 1vh;
+  background: #ec94a2;
+}
+.container aside .hello,
+.container aside .get-social {
+  color: #FAF9FA;
+  height: 3rem;
+  border: 3px solid #ec94a2;
   font-family: 'Meddon', cursive;
 }
-.container .hello h2,
-.container .get-social h2 {
-  font-size: 8vh;
-  /* used vh so font bleeds out of div */
+.container aside .hello h2,
+.container aside .get-social h2 {
+  font-size: 3rem;
 }
+.container aside address {
+  margin: 1vw;
+}
+.container main {
+  height: 60%;
+  background: #877B8D;
+  text-align: center;
+  border: 1px solid green;
+}
+.container main h3 {
+  font-weight: bold;
+}
+/***** COLOR PALETTE - used ColorMind.io *****/
