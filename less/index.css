@@ -145,7 +145,9 @@ body {
   display: flex;
   flex-direction: column;
 }
-/***** GLOBAL STYLES *****/
+body {
+  font-family: 'Poppins', sans-serif;
+}
 h1,
 h2,
 h3,
@@ -166,148 +168,101 @@ h3 {
   font-size: 1.3rem;
   margin-bottom: 1%;
 }
-/***** BODY STYLES *****/
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #282D30;
-}
-.wrapper header {
+header,
+footer,
+.about,
+.skills {
   background-color: pink;
 }
-.wrapper header nav {
-  display: flex;
-  justify-content: center;
-  justify-content: space-evenly;
-  padding: 1%;
+nav,
+footer {
   height: 8%;
 }
-.wrapper header a {
-  justify-content: space-evenly;
-  text-decoration: none;
-  color: white;
-}
-.wrapper header a:hover {
-  color: oldlace;
-}
-.wrapper main {
-  display: flex;
-  justify-content: center;
-}
-@media (max-width: 500px) {
-  .wrapper main {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.wrapper .image {
-  padding: 1% 1% 1% 10%;
-  width: 50%;
-  background-color: oldlace;
-}
-.wrapper .image img {
-  width: 75%;
-  border-radius: 50%;
-}
-@media (max-width: 500px) {
-  .wrapper .image {
-    width: 100%;
-    padding: 2%;
-  }
-  .wrapper .image img {
-    width: 100%;
-  }
-}
-.wrapper .contact {
-  background-color: oldlace;
-  flex-direction: column;
-  width: 50%;
-}
-.wrapper .contact .intro {
-  margin: 25% 0 1% 0;
-  text-align: center;
-}
-.wrapper .contact hr {
-  margin: 2%;
-}
-@media (max-width: 500px) {
-  .wrapper .contact {
-    width: 100%;
-  }
-  .wrapper .contact .intro {
-    margin: 5%;
-  }
-}
-.wrapper .contact .contact-me {
-  text-align: center;
-}
-.wrapper .contact a {
-  color: #282D30;
-}
-.wrapper .contact a i {
-  margin: 2% 2%;
-}
-.about {
-  display: flex;
-  background-color: pink;
-}
-@media (max-width: 500px) {
-  .about {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.about #about-me {
-  width: 50%;
-  text-align: center;
-  padding: 1%;
-}
-@media (max-width: 500px) {
-  .about #about-me {
-    width: 100%;
-  }
-}
-#skills {
-  width: 50%;
-  text-align: center;
-  padding: 1%;
-}
-@media (max-width: 500px) {
-  #skills {
-    width: 100%;
-  }
-}
-/* body div, section, footer, main div {
-			// border: 1px dashed grey;
-		} */
-.work-history {
-  background-color: oldlace;
-}
-.work-history .table {
-  display: flex;
-  flex-direction: column;
-  padding: 1%;
-}
-.work-history .table h3 {
-  display: flex;
-  justify-content: center;
-}
-.work-history .table table,
-.work-history .table th,
-.work-history .table td {
-  border: 1px solid hotpink;
-  text-align: center;
-}
-.work-history .table table th,
-.work-history .table th th,
-.work-history .table td th {
-  font-weight: bold;
-  border: 2px solid hotpink;
-}
+header nav,
 footer {
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
   padding: 1%;
-  height: 8%;
-  background-color: pink;
+}
+.image,
+.contact,
+.work-history {
+  background-color: oldlace;
+}
+nav a {
+  justify-content: space-between;
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: oldlace;
+}
+img {
+  width: 75%;
+  border-radius: 50%;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+.image {
+  padding: 1% 1% 1% 10%;
+  width: 50%;
+}
+hr {
+  margin-right: 1%;
+}
+.contact {
+  flex-direction: column;
+  width: 50%;
+}
+.intro {
+  margin: 25% 0 1% 0;
+  text-align: center;
+}
+.contact-me {
+  text-align: center;
+}
+.contact-me a {
+  color: black;
+}
+i {
+  margin: 1% 1%;
+}
+.about {
+  display: flex;
+}
+#about-me,
+#skills {
+  width: 50%;
+  text-align: center;
+  padding: 1%;
+}
+table,
+th,
+td {
+  border: 1px solid hotpink;
+  text-align: center;
+}
+.table {
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+}
+th {
+  font-weight: bold;
+}
+.table h3 {
+  display: flex;
+  justify-content: center;
+}
+/***** MEDIA QUERIES *****/
+@media (max-width: 500px) {
+  nav,
+  main,
+  section {
+    display: flex;
+    flex-direction: column;
+  }
 }
