@@ -1,1 +1,228 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  color: #faf9fafa;
+  font-family: 'Handlee', cursive;
+  height: 100%;
+}
+/* MY CODE STARTS HERE */
+.container {
+  margin: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  border: 1px solid orangered;
+}
+.container .top-content {
+  flex-grow: 1;
+}
+.container .top-content header {
+  height: 40%;
+  width: 100%;
+  padding: 4vh;
+  order: 1;
+  color: #FAF9FA;
+  font-family: 'Delius Swash Caps', cursive;
+  text-align: center;
+  background: #ec94a2;
+}
+.container .top-content header h1 {
+  font-size: 4rem;
+  padding: 5%;
+}
+.container .top-content header h4 {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 1%;
+  background: #291F33;
+}
+.container aside {
+  height: 100%;
+  width: 35%;
+  padding: 3vh;
+  background: #291F33;
+  text-align: center;
+  border: 1px solid yellow;
+}
+.container aside img {
+  padding: 1vh;
+  border: 2px solid #877B8D;
+  border-radius: 15%;
+  margin-bottom: 4%;
+  height: 40vh;
+  width: 15vw;
+}
+.container aside a {
+  text-decoration: none;
+  color: #FAF9FA;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.container aside i {
+  color: #FAF9FA;
+  padding-top: 1vh;
+}
+.container aside h3 {
+  color: #FAF9FA;
+  font-weight: bold;
+  padding: 1vh;
+  margin: 1vh;
+  background: #ec94a2;
+}
+.container aside .hello,
+.container aside .get-social {
+  color: #FAF9FA;
+  height: 3rem;
+  border: 3px solid #ec94a2;
+  font-family: 'Meddon', cursive;
+}
+.container aside .hello h2,
+.container aside .get-social h2 {
+  font-size: 3rem;
+}
+.container aside address {
+  margin: 1vw;
+}
+.container main {
+  height: 60%;
+  background: #877B8D;
+  text-align: center;
+  border: 1px solid green;
+}
+.container main h3 {
+  font-weight: bold;
+}
+/***** COLOR PALETTE - used ColorMind.io *****/
